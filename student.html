@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - Campus Portal</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <nav>
+                <div class="nav-item active">
+                    <span class="icon">📊</span> Dashboard
+                </div>
+                <div class="nav-item">
+                    <span class="icon">🔍</span> Lost & Found
+                </div>
+                <div class="nav-item">
+                    <span class="icon">📢</span> Complaints
+                </div>
+                <div class="nav-item">
+                    <span class="icon">🤝</span> Volunteers
+                </div>
+                <div class="nav-item">
+                    <span class="icon">🔔</span> Notifications
+                </div>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header>
+                <h1>Lost & Found Report</h1>
+            </header>
+
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon blue">📄</div>
+                    <p>Total Reports</p>
+                    <h2>128</h2>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon red">📋</div>
+                    <p>Active Complaints</p>
+                    <h2>5</h2>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon green">✅</div>
+                    <p>Items Matched</p>
+                    <h2>12</h2>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon yellow">📅</div>
+                    <p>Events Registered</p>
+                    <h2>8</h2>
+                </div>
+            </section>
+
+            <section class="activity-card">
+                <h3>Recent Activity</h3>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="item-info"><span class="item-icon">📱</span> Phone</div>
+                        <div class="item-date">10 Dec 2023</div>
+                        <div class="status pending">Pending</div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="item-info"><span class="item-icon">🎒</span> Backpack</div>
+                        <div class="item-date">08 Dec 2023</div>
+                        <div class="status resolved">Resolved</div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="item-info"><span class="item-icon">👛</span> Wallet</div>
+                        <div class="item-date">05 Dec 2023</div>
+                        <div class="status matching">Matching</div>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="action-buttons">
+                <button class="btn btn-green">Report Lost Item</button>
+                <button class="btn btn-outline">Submit Complaint</button>
+                <button class="btn btn-outline-orange">Register for Event</button>
+            </footer>
+        </main>
+    </div>
+
+</body>
+</html>

@@ -3,14 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Saylani Campus Portal</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="container">
+        <div class="card">
+            <div class="left-panel">
+                <div class="logo">
+                    <img src="images/Screenshot 2026-02-15 102316.png" alt="Logo" width="120" height="60"> 
+                </div>
+                <div class="info">
+                    <h1>Campus Portal</h1>
+                    <p>Manage reports, complaints & events in one place.</p>
+                </div>
+                <div class="wave"></div>
+            </div>
 
-    <h1>hello world!</h1>
+            <div class="right-panel">
+                <div class="form-box">
+                    <h2>Login</h2>
+                    <form id="loginForm">
+                        <div class="input-group">
+                            <label>Email</label>
+                            <input type="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Password</label>
+                            <input type="password" placeholder="••••••••" required>
+                        </div>
 
-    <h2>hiiii</h2>
-    
+                        <div class="role-selector">
+    <button type="button" class="role-btn active" id="studentBtn">Student</button>
+    <button type="button" class="role-btn" id="adminBtn">Admin</button>
+</div>
+
+<form id="loginForm">
+    <button type="submit" class="login-btn">Log In</button>
+</form>
+
+                    </form>
+
+                    
+
+                    <button class="google-btn">
+                        <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="G" width="18">
+                        Sign in with Google
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+    let selectedRole = 'student'; // Default role
+
+    function switchRole(role) {
+        selectedRole = role;
+        const sBtn = document.getElementById('studentBtn');
+        const aBtn = document.getElementById('adminBtn');
+
+        if (role === 'student') {
+            sBtn.classList.add('active');
+            aBtn.classList.remove('active');
+            console.log("Role: Student");
+        } else {
+            aBtn.classList.add('active');
+            sBtn.classList.remove('active');
+            console.log("Role: Admin");
+        }
+    }
+
+    function handleLogin(event) {
+        event.preventDefault(); // Form ko reload hone se rokna
+        
+        if (selectedRole === 'student') {
+            // Dashboard page par bhejna
+            window.location.href = "dashboard.html";
+        } else {
+            alert("Admin login filhaal band hai.");
+        }
+    }
+</script>
+
+    <script src="script.js"></script>
 </body>
 </html>
